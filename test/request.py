@@ -5,7 +5,7 @@ with open("test_books_db.json", "r", encoding="utf-8") as file:
     books = json.load(file)
 
 
-url = "http://127.0.0.1:8080/model"
+url = "https://bookpoisk.onrender.com/model"
 request = {"read_books": books[:5], "all_books": books}
 
 response = requests.post(url, json=request)
